@@ -23,6 +23,7 @@ export default function Home() {
       name: name,
       phone: convertPhoneNumber(phone),
       email: email,
+      user_from: "nugrahita pendit",
       data: {
         address: {
           regency: regency,
@@ -36,10 +37,10 @@ export default function Home() {
   };
 
   const convertPhoneNumber = (phoneNumber) => {
-    if (phoneNumber.startsWith('08')) {
-      return '628' + phoneNumber.slice(2)
+    if (phoneNumber.startsWith("08")) {
+      return "628" + phoneNumber.slice(2);
     } else {
-      return phoneNumber
+      return phoneNumber;
     }
   };
 

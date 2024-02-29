@@ -5,10 +5,18 @@ const UserContext = createContext({});
 
 export const useUser = () => useContext(UserContext);
 
-export const store = ({ name, phone, email, data }) =>
+export const store = ({ name, phone, email, data, user_from }) =>
   supabase
     .from("users")
-    .insert([{ name: name, phone: phone, email: email, data: data }]);
+    .insert([
+      {
+        name: name,
+        phone: phone,
+        email: email,
+        data: data,
+        user_from: user_from,
+      },
+    ]);
 
 const UserProvider = () => {
   return {
